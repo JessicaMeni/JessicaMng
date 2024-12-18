@@ -1,83 +1,103 @@
 header {
     display: flex;
+    height: 4rem;
     & .header-logo {
         font-weight: 700;
         font-size: 1.2em;
         margin-left: 2em;
     }
+    & .hamburger-btn {
+        display: none;
+        & .hamburger-icon i {
+            font-size: 1.5rem;
+            color: #213547;
+        }
+    }
     & .header-nav {
         align-content: center;
+        flex: 1;
         & .header-ul {
         display: flex;
-        & li {
+        justify-content: space-around;
+            & li {
             list-style-type: none;
-            margin: 0 3em;
-            & a {
-                text-decoration: none;
-                padding: 0 1em;
-                box-sizing: border-box;
-                border: 2px solid transparent;
-                color: #536266;
-                font-weight: 500;
-            }
-            & a:hover{
-                border: 2px solid #44817e;
-                border-style: none solid;
-                border-radius: 5px;
-                color: #44817e;
-                font-weight: 600;
+                & a {
+                    text-decoration: none;
+                    padding: 0 1em;
+                    box-sizing: border-box;
+                    border: 2px solid transparent;
+                    color: #536266;
+                    font-weight: 500;
+                }
+                & a:hover{
+                    border: 2px solid #44817e;
+                    border-style: none solid;
+                    border-radius: 5px;
+                    color: #44817e;
+                    font-weight: 600;
+                }
             }
         }
     }
-    }
-} /* ? ajout des icons, button avec img carrés, objectif-fit cover ne fonctionne pas */
+}
 
 @media screen and (max-width:767px) {
     header {
+        justify-content: space-between;
+        align-items: center;
+
         & .hamburger-btn {
             background: none;
             border: none;
-            cursor: pointer;
             display: flex;
-            flex-direction: column;
             justify-content: center;
+            align-items: center;
             gap: 5px;
             width: 30px;
             height: 30px;
+            border-radius: 5px;
+            cursor: pointer;
             & .hamburger-icon {
-                width: 100%;
-                height: 3px;
                 background-color: white;
-                border-radius: 5px;
+            }
+        }
+        &.open {
+            & ~ main, & ~ footer {
+                display: none;
+            }
+            & .header-nav {
+                display: flex;
             }
         }
         & .header-nav {
-            display: flex;
-            position: static;
-            background: none;
-            flex-direction: row;
-            gap: 2rem;
-            padding: 0;
+            display: none;
+            position: fixed;
+            background-color: white;
+            top: 4rem;
+            left: 40%;
+            height: calc(100vh - 4rem);
+            width: 100vw;
+            align-items: center;
+
             & .header-ul {
                 display: flex;
+                flex-direction: column;
+                font-size: 2rem;
+                text-align: center;
                 gap: 1rem;
             }
             & .header-ul li {
                 margin: 1rem 0;
                 &.header-ul li a {
-                color: white;
-                text-decoration: none;
-                font-size: 1.2rem;
-                transition: color 0.3s;
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.2rem;
+                    transition: color 0.3s;
+                    }
                 }
-                &.header-ul li a:hover {
-                    color: #ff9800;
+                .hamburger-btn{
+                    display: none;
                 }
-            }
-            .hamburger-btn {
-                display: none;
-            }
         }
     }
- 
 }

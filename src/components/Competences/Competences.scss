@@ -27,9 +27,12 @@
         & .container-div { 
             background-color: aliceblue;
             margin: 1rem;
-            padding: 1rem;
+            padding: 1rem 2rem;
             text-align: justify;
             color: #0000009f;
+            & .fa-solid {
+                font-size: 35px;
+            }
             & h3{
             color: #0000009f;
             } 

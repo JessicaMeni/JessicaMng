@@ -8,24 +8,36 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     };
 
+    const clickLien = () => {
+        if (isMenuOpen) {
+            toggleMenu();
+        }
+    };
+
     return (
-    <header>
+    <header className={`${isMenuOpen ? "open" : ""}`}>
         <div>
             <p className='header-logo'>Jessica Menigand</p>
         </div>
         <button className='hamburger-btn' onClick={toggleMenu}>
-            e
-            <span className='hamburger-icon'></span>
+            <span className='hamburger-icon'>
+            {isMenuOpen ? (
+            <i className="fa-solid fa-xmark"></i>
+          ) : (
+            <i className="fa-solid fa-bars"></i>
+          )}
+            </span>
         </button>
-        <nav className={`header-nav ${isMenuOpen ? 'open' : ''}`}>
+        <nav className='header-nav'>
             <ul className='header-ul'>
-                <li><a href="#about">Présentation</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a onClick={clickLien} href="#about">Présentation</a></li>
+                <li><a onClick={clickLien} href="#skills">Compétences</a></li>
+                <li><a onClick={clickLien} href="#projects">Projets</a></li>
+                <li><a onClick={clickLien} href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-)};
+    )
+};
 
 export default Header

@@ -26,11 +26,16 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #about {
+        margin: 3em 2em;
         & .div-photo-de-profil {
             width: auto;
         }
         & .banner-div-titre {
             width: 65%;
+            margin-left: 3em;
+            & .banner-h1{
+                font-size: 3.4em;
+            }
         }
     }
 }
@@ -46,6 +51,8 @@
             & .banner-h1 {
                 text-align: center;
                 margin: 3rem 0;
+                font-size: 3rem;
+                overflow-wrap: break-word;
             }
         }
     }

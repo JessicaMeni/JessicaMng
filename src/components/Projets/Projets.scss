@@ -2,11 +2,15 @@
     margin: 6em 2em;
     & .projects-div {
         display: flex;
+        justify-content: space-around;
         flex-flow: row wrap;
-        gap: 2em;
-        /* display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 2em; */
     }
+}
+@media screen and (max-width:1023px) {
+    #projects {
+        & .projects-div {
+        flex-direction: column;
+        }
+    }
+    
 }

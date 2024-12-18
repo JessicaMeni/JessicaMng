@@ -18,6 +18,7 @@ function Competences() {
             </div>
             <div className='container'>
                 <div className='container-div'>
+                    <i className="fa-solid fa-panorama"></i>
                     <h3>Front-End</h3>
                     <p>Ma formation de Développeur Web orientée sur des projets concrets, m&apos;a permis de concevoir des sites web reponsives et dynamiques, adaptés à tous les écrans. 
                     En me basant sur les maquettes graphiques des projets, j&apos;ai principalement travaillé avec des technologies clés comme <strong>HTML, CSS, JavaScript et React</strong> pour concevoir des solutions performantes et attractives.</p>
@@ -29,6 +30,7 @@ function Competences() {
                     J&apos;ai aussi développé des API et structuré des bases de données avec <strong>MongoDB</strong>, pour répondre efficacement aux besoins des utilisateurs.</p>
                 </div>  
                 <div className='container-div'>
+                    <i className="fa-solid fa-chart-line"></i>
                     <h3>Performance</h3>
                     <p>J&apos;ai pu expérimenter <strong>l&apos;optimisation</strong> des <strong>performances</strong> et la maintenance de site web existants, des actions essentielles pour garantir leur bon fonctionnement et améliorer leur visibilité sur les moteurs de recherche grâce à une stratégie <strong>SEO</strong> efficace.</p>
                 </div>

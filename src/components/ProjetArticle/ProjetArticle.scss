@@ -2,13 +2,17 @@
     & .projects-div {
         margin: 3em 0;
         & article {
-            width: calc(33.333% - 27px);
-            & .project-article {
-
+            width: 25vw;
+            height: 25vw;
+            overflow: hidden;
+            
+            & .project-article-button {
+                background: none;
+                border: none;
                     & .projet-img-button {
-                        object-fit: cover;
                         width: 100%;
-                        border-radius: 18px;
+                        border-radius: 8px;
+                        border: 1px solid gainsboro;
                         padding: 1px;
                     }
                     & dialog {
