@@ -8,10 +8,10 @@
             text-align: center;
             margin: 0;
             & .img-skills-frontend {
-                max-width: 100%;
+                max-width: 90%;
             }
             & .img-skills-backend {
-                max-width: 100%;
+                max-width: 90%;
             }
             & figcaption {
                 text-align: center;
@@ -43,8 +43,8 @@
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
     #skills {
+        margin: 3em 2em;
         & .skills-div {
-            flex-direction: column;
             align-items: center;
             & figure {
                 & .img-skills-frontend {
