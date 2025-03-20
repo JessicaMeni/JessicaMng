@@ -1,8 +1,8 @@
 import {useRef} from "react";
 import PropTypes from 'prop-types';
-import './ProjetArticle.scss'
+import '../ProjetArticle/ProjetArticle.scss'
 
-function ProjetArticle({ imgSrc, projetImgAlt, lienVersSite, imgAlt, text }) {
+function ProjetArticleGit({ imgSrc, projetImgAlt, lienVersSite, imgAlt, text }) {
     const showButtonRef = useRef(null);
     const dialogRef = useRef(null);
     
@@ -14,7 +14,7 @@ function ProjetArticle({ imgSrc, projetImgAlt, lienVersSite, imgAlt, text }) {
             <button className='project-article-button' ref={showButtonRef} onClick={handleClick}>
                 <img className="projet-img-button" src={projetImgAlt} alt={imgAlt}></img>
             </button>
-            <a href={lienVersSite} target="_blank">Cliquez pour voir le site web</a>
+            <a href={lienVersSite} target="_blank">Cliquez pour voir le code sur GitHub</a>
             <dialog ref={dialogRef} onClick={() => dialogRef.current.close()}>
                 <button onClick={() => dialogRef.current.close()}>Cliquez pour fermer la boîte</button>
                 <div className="projet-div-img">
@@ -27,7 +27,8 @@ function ProjetArticle({ imgSrc, projetImgAlt, lienVersSite, imgAlt, text }) {
     )
 }
 
-ProjetArticle.propTypes = {
+
+ProjetArticleGit.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     projetImgAlt: PropTypes.string.isRequired,
     lienVersSite: PropTypes.string.isRequired,
@@ -35,4 +36,4 @@ ProjetArticle.propTypes = {
     text: PropTypes.string.isRequired,
 }
 
-export default ProjetArticle;
+export default ProjetArticleGit;

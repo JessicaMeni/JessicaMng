@@ -3,7 +3,7 @@
     & .projects-div {
         display: flex;
         justify-content: space-around;
-        flex-flow: row wrap;
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width:1023px) {

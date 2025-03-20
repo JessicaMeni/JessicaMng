@@ -2,25 +2,32 @@
     & .projects-div {
         margin: 3em 0;
         & article {
-            width: 25vw;
-            height: 25vw;
+            text-align: center;
+            margin-bottom: 3em;
             /* overflow: hidden; */
             & .project-article-button {
                 background: none;
                 border: none;
+                width: 375px;
+                height: 375px;
+                border-radius: 8px;
+                border: 4px solid rgba(220, 220, 220, 0.432);
                     & .projet-img-button {
-                        width: 100%;
-                        border-radius: 8px;
-                        border: 1px solid gainsboro;
+                        
                         padding: 1px;
+                        height: 100%;
+                        width: 100%;
+                        object-fit: contain;
                     }  
             }
             & a {
                 text-decoration: none;
                 color: #536266;
+                display: block;
+                text-align: center;
             }
             & a:hover{
-                color: #44817e;
+                color: #009B4D;
                 text-decoration: underline;
             }
             & dialog {
@@ -37,7 +44,9 @@
                         margin: 4% 0 0 0;
                         width: 30%;
                         overflow: auto;
-                        max-height: 590px;  
+                        max-height: 100%;
+                        font-size: large;
+                        line-height: 1.7;
                     }
                     & .projet-img-modal {
                         cursor: pointer;
@@ -61,8 +70,8 @@
                 width: 100%;
                 height: auto;
                 text-align: center;
-                display: flex;
-                flex-direction: column;
+                /* display: flex;
+                flex-direction: column; */
                 margin-bottom: 1em;
                 & .project-article-button {
                     & .projet-img-button {
